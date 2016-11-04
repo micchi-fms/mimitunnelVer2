@@ -25,30 +25,32 @@ $widthSp: 568px; //スマートフォン
 //全体的な
 body{
 	margin:0px;
+	font-family:'arial black';
 }
-
 ul{
-	margin:5px;
+	margin:20px;
 	li{
-		margin:5px;
+		margin:20px 0px;
 	}
 }
-
 .flex-container{
 	@include fixcenter(100%,wrap);
 }
 .main{
 	width:80%;
-	background-color:red;
+	background-color:#fff9f4;
 	text-align:left;
 }
 .title{
 	width:100%;
-	background-color:green;
+
+	// background-color:green;
 	.title-box{
 		img{
 			width:100%;
 		}
+	margin-bottom:-5px;
+	padding-bottom:0px;
 	}
 }
 .movie-wrap{
@@ -81,8 +83,13 @@ $mainlist: overview,movie,history,media,member;
 	.#{$s}{
 		h2{
 			color:white;
-			padding-left:10px;
+			padding-left:30px;
 			background-color:pink;
+			font-size: 200%;
+			margin:1px 0px;
+			//ほんとは0.8だよ
+			padding-top:0.4em;
+			padding-bottom:0.4em;
 		}
 	}
 	@if $s!=overview and $s!=member{
@@ -90,12 +97,26 @@ $mainlist: overview,movie,history,media,member;
 			@include fixcenter(100%,wrap);
 			.discri{
 				width:90%;
-				background-color:green;
+				// background-color:green;
 			}
 		}
 	}
 }
+.overview{
+	h2{
+		margin:0px 0px;
+	}
+}
+.media{
+	li{
+		margin-top: 20px;
+		margin-bottom:5px;
+	}
+}
 .movie{
+	h2{
+		margin-top:1px;
+	}
 	ul{
 		list-style:none;
 	}
@@ -103,6 +124,10 @@ $mainlist: overview,movie,history,media,member;
 .member{
 	ul{
 		list-style:none;
+		margin-bottom: 20px;
+		li{
+			margin:10px 0px;
+		}
 	}
 }
 .overview{
@@ -112,7 +137,7 @@ $mainlist: overview,movie,history,media,member;
 		@each $i in $overviewList{
 			.column-#{$i}{
 				width:50%;
-				background-color:blue;
+				// background-color:blue;
 				img{
 					width:100%;
 					height:100%;
@@ -127,12 +152,12 @@ $mainlist: overview,movie,history,media,member;
 							width:100%;
 							text-align:left;
 							padding:5px 5px;
-							background-color:yellow;
+							// background-color:yellow;
 						}
 						.gif-boxs{
 							width:100%;
 							text-align:left;
-							background-color:red;
+							// background-color:red;
 							.gif-box{
 								@include fixcenter(100%,nowrap);
 								-webkit-justify-content: space-around; /* Safari */
